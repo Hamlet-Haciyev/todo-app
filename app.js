@@ -78,8 +78,12 @@ function addData() {
 
   let LSdata = JSON.parse(localStorage.getItem("datas"));
 
-  for (let i = 0; i < LSdata.length; i++) {
-    getDataLSArr.push(LSdata[i]);
+  if (LSdata != null) {
+    for (let i = 0; i < LSdata.length; i++) {
+      getDataLSArr.push(LSdata[i]);
+    }
+  } else {
+    getDataLSArr.push(val);
   }
   if (val !== "") {
     getDataLSArr.push(val);
